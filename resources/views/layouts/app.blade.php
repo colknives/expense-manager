@@ -7,34 +7,22 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Expense Manager') }}</title>
-
-
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/adminlte.min.js') }}" defer></script>
-
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/adminlte.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-
-@if(Auth::check())
-    <body>
-@else
-    <body class="hold-transition login-page">
-@endif
-
-<div id="app">
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+<body>
+    <div id="app">
+        @yield('content')
     </div>
 </body>
 </html>

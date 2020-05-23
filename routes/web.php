@@ -18,12 +18,10 @@ Route::redirect('/', '/login');
 
 Route::get('/login', ['as' => 'auth.login.show', 'uses' => 'Auth\LoginController@showLoginForm']);
 Route::post('/login', ['as' => 'auth.login', 'uses' => 'Auth\LoginController@login']);
+Route::post('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\LoginController@logout']);
 
 Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
-    Route::post('/logout', ['as' => 'login', 'uses' => 'Auth\LoginController@logout']);
 
 });
-
-
