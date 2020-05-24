@@ -2320,6 +2320,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "user-modal",
   props: ["title", "name", "email", "role_uuid", "create", "csrf", "uuid", "roles", "roleid"],
@@ -38465,95 +38479,137 @@ var render = function() {
                 domProps: { value: _vm.uuid }
               }),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c("div", { staticClass: "form-group row" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-md-4 col-form-label",
-                      attrs: { for: "name" }
-                    },
-                    [_vm._v("Name")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text", name: "name" },
-                      domProps: { value: _vm.name }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-md-4 col-form-label",
-                      attrs: { for: "description" }
-                    },
-                    [_vm._v("Email")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text", name: "email" },
-                      domProps: { value: _vm.email }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group row" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-md-4 col-form-label",
-                      attrs: { for: "role" }
-                    },
-                    [_vm._v("Role")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-12" }, [
+              _c(
+                "div",
+                { staticClass: "modal-body" },
+                [
+                  _c("div", { staticClass: "form-group row" }, [
                     _c(
-                      "select",
-                      {
+                      "label",
+                      { staticClass: "col-form-label", attrs: { for: "name" } },
+                      [_vm._v("Name")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-12" }, [
+                      _c("input", {
                         staticClass: "form-control",
-                        attrs: { name: "role_uuid" }
+                        attrs: { type: "text", name: "name" },
+                        domProps: { value: _vm.name }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "col-form-label",
+                        attrs: { for: "description" }
                       },
-                      [
-                        _vm._l(_vm.roles, function(role) {
-                          return [
-                            role.uuid === _vm.roleid
-                              ? [
-                                  _c(
-                                    "option",
-                                    {
-                                      attrs: { selected: "" },
-                                      domProps: { value: role.uuid }
-                                    },
-                                    [_vm._v(_vm._s(role.name))]
-                                  )
-                                ]
-                              : _vm._e(),
-                            _vm._v(" "),
-                            role.uuid !== _vm.roleid
-                              ? [
-                                  _c(
-                                    "option",
-                                    { domProps: { value: role.uuid } },
-                                    [_vm._v(_vm._s(role.name))]
-                                  )
-                                ]
-                              : _vm._e()
-                          ]
-                        })
-                      ],
-                      2
-                    )
-                  ])
-                ])
-              ]),
+                      [_vm._v("Email")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-12" }, [
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "email" },
+                        domProps: { value: _vm.email }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group row" }, [
+                    _c(
+                      "label",
+                      { staticClass: "col-form-label", attrs: { for: "role" } },
+                      [_vm._v("Role")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-12" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control",
+                          attrs: { name: "role_uuid" }
+                        },
+                        [
+                          _vm._l(_vm.roles, function(role) {
+                            return [
+                              role.uuid === _vm.roleid
+                                ? [
+                                    _c(
+                                      "option",
+                                      {
+                                        attrs: { selected: "" },
+                                        domProps: { value: role.uuid }
+                                      },
+                                      [_vm._v(_vm._s(role.name))]
+                                    )
+                                  ]
+                                : _vm._e(),
+                              _vm._v(" "),
+                              role.uuid !== _vm.roleid
+                                ? [
+                                    _c(
+                                      "option",
+                                      { domProps: { value: role.uuid } },
+                                      [_vm._v(_vm._s(role.name))]
+                                    )
+                                  ]
+                                : _vm._e()
+                            ]
+                          })
+                        ],
+                        2
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm.create
+                    ? [
+                        _c("div", { staticClass: "form-group row" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-form-label",
+                              attrs: { for: "password" }
+                            },
+                            [_vm._v("Password")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: { type: "password", name: "password" }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group row" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-form-label",
+                              attrs: { for: "password_confirmation" }
+                            },
+                            [_vm._v("Confirm Password")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "password",
+                                name: "password_confirmation"
+                              }
+                            })
+                          ])
+                        ])
+                      ]
+                    : _vm._e()
+                ],
+                2
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer col-12 text-right" }, [
                 _c("div", { staticClass: "col-12 " }, [

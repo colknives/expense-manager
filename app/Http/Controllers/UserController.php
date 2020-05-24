@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateUserRequest;
 use App\Http\Requests\UserRequest;
 use App\Repositories\RoleRepository;
 use Illuminate\Contracts\Support\Renderable;
 use App\Repositories\UserRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Ramsey\Uuid\Uuid;
 
 class UserController extends Controller
@@ -53,7 +55,8 @@ class UserController extends Controller
             'uuid' => Uuid::uuid4()->toString(),
             'name' => $request->post('name'),
             'email' => $request->post('email'),
-            'role_uuid' => $request->post('role_uuid')
+            'role_uuid' => $request->post('role_uuid'),
+            'password' => Hash::make($request->post('password'))
         ];
 
         $this->userRepository->saveUser($data);
@@ -64,10 +67,10 @@ class UserController extends Controller
     /**
      * Update user instance.
      *
-     * @param UserRequest $request
+     * @param UpdateUserRequest $request
      * @return RedirectResponse
      */
-    public function update(UserRequest $request)
+    public function update(UpdateUserRequest $request)
     {
         $data = [
             'name' => $request->post('name'),

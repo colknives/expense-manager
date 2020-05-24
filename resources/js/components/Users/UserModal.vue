@@ -11,19 +11,19 @@
                         <input type="hidden" name="uuid" :value="uuid" />
                         <div class="modal-body">
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label">Name</label>
+                                <label for="name" class="col-form-label">Name</label>
                                 <div class="col-md-12">
                                     <input type="text" class="form-control" name="name" :value="name" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="description" class="col-md-4 col-form-label">Email</label>
+                                <label for="description" class="col-form-label">Email</label>
                                 <div class="col-md-12">
                                     <input type="text" class="form-control" name="email" :value="email" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="role" class="col-md-4 col-form-label">Role</label>
+                                <label for="role" class="col-form-label">Role</label>
                                 <div class="col-md-12">
                                     <select class="form-control" name="role_uuid">
                                         <template v-for="role in roles">
@@ -37,6 +37,20 @@
                                     </select>
                                 </div>
                             </div>
+                            <template v-if="create">
+                                <div class="form-group row">
+                                    <label for="password" class="col-form-label">Password</label>
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" name="password"/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password_confirmation" class="col-form-label">Confirm Password</label>
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" name="password_confirmation" />
+                                    </div>
+                                </div>
+                            </template>
                         </div>
                         <div class="modal-footer col-12 text-right">
                             <div class="col-12 ">
