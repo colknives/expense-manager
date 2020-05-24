@@ -9,16 +9,3 @@
         test sdasdasdasdsdasdasdasd
     </div>
 @endsection
-<script>
-    import LeftNavigation from "../js/components/Partials/LeftNavigation";
-    import TopNavigation from "../js/components/TopNavigation";
-    export default {
-        components: {TopNavigation, LeftNavigation}
-    }
-</script>
-        <script>
-            import TopNavigation from "../js/components/TopNavigation";
-            export default {
-                components: {TopNavigation}
-            }
-        </script>

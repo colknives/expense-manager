@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Construct instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +23,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
+
+
         return view('dashboard');
     }
 }

@@ -2,24 +2,25 @@
 
 namespace App\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Role;
 
-class RedirectIfAuthenticated
+class IsAdmin
 {
     /**
      * Handle an incoming request.
      *
      * @param  Request  $request
      * @param Closure $next
-     * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
-        if (Auth::guard($guard)->check()) {
+        $role = Role::where('uuid', Auth::user()->role_uuid)->first();
+
+        if( $role->admin != 1 ){
             return redirect('dashboard');
         }
 
