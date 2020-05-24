@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class ExpenseCategory extends Model
 {
-    protected $table = 'roles';
+    protected $table = 'expense_categories';
 
     protected $fillable = [
         "uuid",
         "name",
         "description",
-        "admin",
         "created_at"
     ];
 

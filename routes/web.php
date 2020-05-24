@@ -40,6 +40,13 @@ Route::group(['middleware' => 'auth'], function(){
             Route::post('delete', ['as' => 'users.delete', 'uses' => 'UserController@delete']);
         });
 
+        Route::group(['prefix' => 'expense_categories'], function(){
+            Route::get('/', ['as' => 'expense.categories.list', 'uses' => 'ExpenseCategoryController@index']);
+            Route::post('save', ['as' => 'expense.categories.save', 'uses' => 'ExpenseCategoryController@save']);
+            Route::post('update', ['as' => 'expense.categories.update', 'uses' => 'ExpenseCategoryController@update']);
+            Route::post('delete', ['as' => 'expense.categories.delete', 'uses' => 'ExpenseCategoryController@delete']);
+        });
+
     });
 
 });
