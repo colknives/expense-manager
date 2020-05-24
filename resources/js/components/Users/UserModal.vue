@@ -90,7 +90,6 @@
         },
         methods: {
             deleteUser: function(){
-                this.action = 'users/delete';
                 document.getElementById("delete_user_form").submit();
             }
         }

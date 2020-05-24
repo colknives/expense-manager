@@ -22,6 +22,14 @@
 </head>
 <body>
     <div id="app">
+
+        @if( Auth::user() )
+
+            <top-navigation csrf="{{ csrf_token()  }}" name="{{ Auth::user()->name }}"></top-navigation>
+            <left-navigation admin="{{ Auth::user()->role->admin  }}"></left-navigation>
+
+        @endif
+
         @yield('content')
     </div>
 </body>

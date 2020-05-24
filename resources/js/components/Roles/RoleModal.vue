@@ -61,7 +61,6 @@
         },
         methods: {
             deleteRole: function(){
-                this.action = 'roles/delete';
                 document.getElementById("delete_role_form").submit();
             }
         }

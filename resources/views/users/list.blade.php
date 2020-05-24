@@ -2,17 +2,11 @@
 
 @section('content')
 
-    <top-navigation></top-navigation>
-    <left-navigation></left-navigation>
-
     <div class="container">
         <div class="col-12">
-            <div class="col-12">
+            <div class="col-12 mb-5">
                 <div class="col-6 text-left">
-                    Users
-                </div>
-                <div class="col-6 text-left">
-                    User Management > Users
+                    <h2>Users</h2>
                 </div>
             </div>
             <div class="col-12">

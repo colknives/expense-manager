@@ -1,18 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <top-navigation></top-navigation>
-    <left-navigation></left-navigation>
-
     <div class="container">
         <div class="col-12">
-            <div class="col-12">
+            <div class="col-12 mb-5">
                 <div class="col-6 text-left">
-                    Categories
-                </div>
-                <div class="col-6 text-left">
-                    Expense Management > Categories
+                    <h2>Expense Categories</h2>
                 </div>
             </div>
             <div class="col-12">

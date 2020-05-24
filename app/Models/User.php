@@ -38,6 +38,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Role relationship
+     *
+     */
     public function role()
     {
         return $this->hasOne(Role::class, 'uuid', 'role_uuid');

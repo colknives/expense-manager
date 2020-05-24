@@ -9,6 +9,7 @@ use Illuminate\Contracts\Support\Renderable;
 use App\Repositories\UserRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Ramsey\Uuid\Uuid;
 

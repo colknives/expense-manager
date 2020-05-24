@@ -61,7 +61,6 @@
         },
         methods: {
             deleteCategory: function(){
-                this.action = 'expense_categories/delete';
                 document.getElementById("delete_category_form").submit();
             }
         }

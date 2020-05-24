@@ -36,7 +36,7 @@ class ExpenseCategoryController extends Controller
     }
 
     /**
-     * Save role instance.
+     * Save expense category instance.
      *
      * @param ExpenseCategoryRequest $request
      * @return RedirectResponse
@@ -55,7 +55,7 @@ class ExpenseCategoryController extends Controller
     }
 
     /**
-     * Update role instance.
+     * Update expense category instance.
      *
      * @param ExpenseCategoryRequest $request
      * @return RedirectResponse
@@ -73,7 +73,7 @@ class ExpenseCategoryController extends Controller
     }
 
     /**
-     * Delete role instance.
+     * Delete expense category instance.
      *
      * @param Request $request
      * @return RedirectResponse

@@ -23,6 +23,7 @@ Route::post('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\LoginController@l
 Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+    Route::get('/logout', ['as' => 'auth.link.logout', 'uses' => 'Auth\LoginController@logoutUser']);
 
     Route::group(['middleware' => 'isadmin'], function(){
 
@@ -47,6 +48,13 @@ Route::group(['middleware' => 'auth'], function(){
             Route::post('delete', ['as' => 'expense.categories.delete', 'uses' => 'ExpenseCategoryController@delete']);
         });
 
+    });
+
+    Route::group(['prefix' => 'expenses'], function(){
+        Route::get('/', ['as' => 'expenses.list', 'uses' => 'ExpenseController@index']);
+        Route::post('save', ['as' => 'expenses.save', 'uses' => 'ExpenseController@save']);
+        Route::post('update', ['as' => 'expenses.update', 'uses' => 'ExpenseController@update']);
+        Route::post('delete', ['as' => 'expenses.delete', 'uses' => 'ExpenseController@delete']);
     });
 
 });
